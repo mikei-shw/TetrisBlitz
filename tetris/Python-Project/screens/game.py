@@ -274,23 +274,20 @@ def game():
             const.WINDOW.blit(game_level_display, (520, 530))
 
             # Game speed display
-            game_level_display = const.sudo_small_font.render("GAME SPEED: " + str(tick), True, const.BLUE)
-            const.WINDOW.blit(game_level_display, (520, 750))
+            game_level_display = const.sudo_medium_font.render(str(tick), True, const.DARK_GREY)
+            const.WINDOW.blit(game_level_display, (690, 765))
 
-            # Game mult_display
-            game_level_display = const.sudo_small_font.render("ROW CLEAR MULTIPLIER: " + str(1 + (lines_cleared * .3)),
-                                                              True, const.BLUE)
-            const.WINDOW.blit(game_level_display, (520, 780))
+            # Clear mult_display
+            game_level_display = const.sudo_medium_font.render(str((1 + (lines_cleared * .3)).__round__(2)), True, const.DARK_GREY)
+            const.WINDOW.blit(game_level_display, (690, 822))
 
-            # Game mult_display
-            game_level_display = const.sudo_small_font.render("TICK MULTIPLIER: " + str(tick_multiplier),
-                                                              True, const.BLUE)
-            const.WINDOW.blit(game_level_display, (520, 810))
+            # Speed mult_display
+            game_level_display = const.sudo_medium_font.render(str(tick_multiplier), True, const.DARK_GREY)
+            const.WINDOW.blit(game_level_display, (690, 880))
 
-            # Game mult_display
-            game_level_display = const.sudo_small_font.render("POWER-UP MULTIPLIER: " + str(p3_multiplier),
-                                                              True, const.BLUE)
-            const.WINDOW.blit(game_level_display, (520, 840))
+            # Power mult_display
+            game_level_display = const.sudo_medium_font.render(str(p3_multiplier), True, const.DARK_GREY)
+            const.WINDOW.blit(game_level_display, (690, 937))
 
             # Power-ups Display ---------------------------------------------------------------------------------------
             if (pow_timer - p1_last_used) < const.pow_time_to_refresh[
